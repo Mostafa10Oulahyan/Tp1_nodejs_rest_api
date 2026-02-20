@@ -1,7 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const morgan = require("morgan");
-const { success } = require("../functions");   // <-- chemin important
+const { success } = require("/functions");   // <-- chemin important
 
 const app = express();
 
