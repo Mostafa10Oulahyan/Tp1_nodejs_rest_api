@@ -1,7 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const morgan = require("morgan");
-const { success } = require("/functions");   // <-- chemin important
+const { success } = require("../functions");   // <-- chemin important
 
 const app = express();
 
@@ -36,5 +36,10 @@ app.get("/", (req, res) => {
 
 app.use("/api/v1/calculs", CalculRouter);
 
-// PAS de app.listen !
+// app.listen(3000, () => {
+//     console.log("Server is running on port 3000");
+// });
+
+
+// For Vercel deployment
 module.exports = app;
